@@ -112,7 +112,7 @@ def main():
 def prompt(message):
     answer = ""
     while(answer != "Y" and answer != "N"):
-        answer = raw_input(message + " (Y/N): ")
+        answer = input(message + " (Y/N): ")
         answer = answer.upper()
     return answer == "Y"
 
@@ -310,9 +310,9 @@ class Shell:
         # Fetch command
         try:
             if (self._has_prompt()):
-                command = raw_input("")
+                command = input("")
             else:
-                command = raw_input(self._get_prompt())
+                command = input(self._get_prompt())
 
             # Check if the command is a RSH command
             if command.startswith("rsh"):
