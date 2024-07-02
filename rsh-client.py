@@ -230,7 +230,7 @@ class Socket:
     # Helper function to break a string into x chunks
     # @return list
     def _chunks(self, lst, chunksize):
-        for i in xrange(0, len(lst), chunksize):
+        for i in range(0, len(lst), chunksize):
             yield lst[i:i+chunksize]
 
 
