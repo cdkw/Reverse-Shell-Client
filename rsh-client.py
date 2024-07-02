@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-# Reverse shell client 2.0.0 (https://www.paradoxis.nl/projects/reverse-shell-client)
-# Copyright (c) 2014 - 2015 | Paradoxis
 #
 # Reverse shell client is a netcat listener alternative.
 # Mostly used if you don't have access to netcat on a given system or
@@ -19,7 +17,8 @@
 #   python rsh-client.py -H "127.0.0.1,192.168.1.66" | Only accept connections from multiple hosts
 #
 # @version 2.0.0
-# @author  Paradoxis <luke@paradoxis.nl>
+# @author  Paradoxis
+# @fork by cdkw on github
 #
 # @todo Add autofingerprint parameter
 # @todo Add Proxy tunneling
@@ -35,13 +34,13 @@ from datetime import date
 
 # Global variables
 version = "2.0.0"
-project_url = "https://www.paradoxis.nl/projects/reverse-shell-client"
+project_url = "https://github.com/cdkw/Reverse-Shell-Client"
 
 # Display header
 def header():
     print("")
     print("Reverse shell client %s (%s)" % (version, project_url))
-    print("Copyright (c) 2014 - %d | Paradoxis" % (date.today().year))
+    print("Use with caution | Fork by cdkw")
     print("")
 
 # Display usage
