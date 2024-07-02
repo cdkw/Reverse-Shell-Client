@@ -143,7 +143,7 @@ class Socket:
         except socket.timeout:
             print("[!] Error: Connection timed out")
             self.close()
-        except socket.error, err:
+        except socket.error as err:
             print("[!] Error: Connection lost")
             print(err)
             self.close()
@@ -173,7 +173,7 @@ class Socket:
         except socket.timeout:
             print("[!] Error: Connection timed out")
             self.close()
-        except socket.error, err:
+        except socket.error as err:
             print("[!] Error: Connection lost")
             print(err)
             self.close()
@@ -210,7 +210,7 @@ class Socket:
         except socket.timeout:
             print("[!] Error: Connection timed out")
             self.close()
-        except socket.error, e:
+        except socket.error as e:
             err = e.args[0]
             if err == errno.EAGAIN or err == errno.EWOULDBLOCK:
                 return output
@@ -225,7 +225,7 @@ class Socket:
         try:
             self.sock.close()
             if exit: sys.exit()
-        except socket.error, e:
+        except socket.error as e:
             print("[!] Error: " + str(e))
 
     # Helper function to break a string into x chunks
@@ -666,7 +666,7 @@ class RSH:
             file.close()
             print("[+] Successfully downloaded file to %s!" % localfile)
             return localfile
-        except Exception, err:
+        except Exception as err:
             print("[!] Error: %s" % err)
 
     # Upload and execute a local file to the remote shell
